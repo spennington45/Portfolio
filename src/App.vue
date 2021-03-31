@@ -38,10 +38,10 @@
           <p>Social links</p>
           <a
             href="spennington45@gmail.com"
-            class="btn btn-social-icon btn-email"
+            class="btn btn-social-icon emailIcon"
             title="mail: spennington45@gmail.com"
           >
-            <i class="btn-email"></i>
+            <font-awesome-icon :icon="['fas', 'envelope']" />
           </a>
 
           <a
@@ -50,7 +50,7 @@
             class="btn btn-social-icon btn-linkedin"
             title="linkedin: steven-pennington"
           >
-            <span class="btn-linkedin">icon</span>
+            <font-awesome-icon :icon="{ prefix: 'fab', iconName: 'linkedin' }" />
           </a>
 
           <a
@@ -59,25 +59,7 @@
             class="btn btn-social-icon btn-github"
             title="github: spennington45"
           >
-            <i class="fa fa-github-square"></i>
-          </a>
-
-          <a
-            rel="me"
-            href="https://facebook.com/jtomaszewski"
-            class="button button-icon"
-            title="facebook: jtomaszewski"
-          >
-            <i class="fa fa-facebook-square"></i>
-          </a>
-
-          <a
-            rel="me"
-            href="https://twitter.com/jtompl"
-            class="button button-icon"
-            title="twitter: @jtompl"
-          >
-            <i class="fa fa-twitter-square"></i>
+            <font-awesome-icon :icon="{ prefix: 'fab', iconName: 'github' }" />
           </a>
         </div>
 
@@ -100,7 +82,9 @@ export default {
 <style>
 @import "https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700";
 
+
 #app {
+  display: flex;
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -125,7 +109,10 @@ body {
   font-family: "Poppins", sans-serif;
   background: #fafafa;
 }
-
+.social-icons > a {
+  margin-right: 10px;
+  margin-left: 10px;
+}
 p {
   font-family: "Poppins", sans-serif;
   font-size: 1.1em;
@@ -168,15 +155,18 @@ p {
 .router-link-exact-active {
   color: #7386d5 !important;
 }
-/* #sidebar ul li.active > .sidebarLink,
+#sidebar ul li.active > .sidebarLink,
 .sidebarLinka[aria-expanded="true"] {
   color: #fff;
   background: #005806;
-} */
+}
 .sidebarLink {
   font-size: 0.9em !important;
   padding-left: 30px !important;
   background: #013805;
+}
+.emailIcon {
+  background: #fafafa !important;
 }
 @media (max-width: 1024px) {
   #sidebar {
