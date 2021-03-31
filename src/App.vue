@@ -37,7 +37,7 @@
         <div class="social-icons">
           <p>Social links</p>
           <a
-            href="spennington45@gmail.com"
+            href="mailto:spennington45@gmail.com"
             class="btn btn-social-icon emailIcon"
             title="mail: spennington45@gmail.com"
           >
@@ -45,12 +45,13 @@
           </a>
 
           <a
-            rel="me"
             href="https://www.linkedin.com/in/steven-pennington"
             class="btn btn-social-icon btn-linkedin"
             title="linkedin: steven-pennington"
           >
-            <font-awesome-icon :icon="{ prefix: 'fab', iconName: 'linkedin' }" />
+            <font-awesome-icon
+              :icon="{ prefix: 'fab', iconName: 'linkedin' }"
+            />
           </a>
 
           <a
@@ -81,7 +82,6 @@ export default {
 
 <style>
 @import "https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700";
-
 
 #app {
   display: flex;
@@ -170,10 +170,28 @@ p {
 }
 @media (max-width: 1024px) {
   #sidebar {
-    margin-left: -20%;
+    margin-left: -15%;
+  }
+  #sidebar > * {
+    margin-right: 100%;
+  }
+  .sidebar-header {
+    padding: 0% !important;
   }
   #sidebar.active {
     margin-left: 0;
+  }
+  #sidebar:hover {
+    margin-left: 0%;
+    min-width: 300px !important;
+  }
+  #sidebar:hover > * {
+    margin-right: 0%;
+  }
+}
+@media (max-width: 760px) {
+  #profileImg {
+    display: none;
   }
 }
 </style>
