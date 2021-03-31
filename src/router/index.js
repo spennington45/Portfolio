@@ -1,6 +1,10 @@
 import Vue from 'vue'
 import Router from 'vue-router'
 import Home from '../views/Home.vue'
+import About from '../views/About.vue'
+import Contact from '../views/Contact.vue'
+import Resume from '../views/Resume.vue'
+import ProjectDetails from '../views/ProjectDetails.vue'
 
 
 
@@ -23,6 +27,26 @@ const router = new Router({
       path: '/',
       name: 'home',
       component: Home,
+    },
+    {
+      path: '/about',
+      name: 'about',
+      component: About,
+    },
+    {
+      path: '/contact',
+      name: 'contact',
+      component: Contact,
+    },
+    {
+      path: '/resume',
+      name: 'resume',
+      component: Resume,
+    },
+    {
+      path: '/project/:id',
+      name: 'projectDetails',
+      component: ProjectDetails,
     },
     // {
     //   path: '/breweries',

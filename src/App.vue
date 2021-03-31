@@ -1,67 +1,105 @@
 <template>
   <div id="app">
-    <nav id="sidebar">
+    <nav id="sidebar" class="sidebar">
       <div class="sidebar-header">
-            <img id="profileImg" src=".\assets\Pennington profile image.jpg" alt="img">
-            <h3>Steven Pennington</h3>
+        <img
+          id="profileImg"
+          src=".\assets\Pennington profile image.jpg"
+          alt="img"
+        />
+        <h3>Steven Pennington</h3>
+      </div>
+
+      <ul class="list-unstyled components">
+        <p>FULL-STACK SOFTWARE DEVELOPER</p>
+        <li>
+          <router-link v-bind:to="{ name: 'home' }" class="sidebarLink"
+            >Portfolio Overview</router-link
+          >
+        </li>
+        <li>
+          <router-link v-bind:to="{ name: 'about' }" class="sidebarLink"
+            >About</router-link
+          >
+        </li>
+        <li>
+          <router-link v-bind:to="{ name: 'resume' }" class="sidebarLink"
+            >Resume</router-link
+          >
+        </li>
+        <li>
+          <router-link v-bind:to="{ name: 'contact' }" class="sidebarLink"
+            >Contact</router-link
+          >
+        </li>
+      </ul>
+      <div class="navigation-extend-bar">
+        <div class="social-icons">
+          <p>Social links</p>
+          <a
+            href="spennington45@gmail.com"
+            class="btn btn-social-icon btn-email"
+            title="mail: spennington45@gmail.com"
+          >
+            <i class="btn-email"></i>
+          </a>
+
+          <a
+            rel="me"
+            href="https://www.linkedin.com/in/steven-pennington"
+            class="btn btn-social-icon btn-linkedin"
+            title="linkedin: steven-pennington"
+          >
+            <span class="btn-linkedin">icon</span>
+          </a>
+
+          <a
+            rel="me"
+            href="https://github.com/spennington45"
+            class="btn btn-social-icon btn-github"
+            title="github: spennington45"
+          >
+            <i class="fa fa-github-square"></i>
+          </a>
+
+          <a
+            rel="me"
+            href="https://facebook.com/jtomaszewski"
+            class="button button-icon"
+            title="facebook: jtomaszewski"
+          >
+            <i class="fa fa-facebook-square"></i>
+          </a>
+
+          <a
+            rel="me"
+            href="https://twitter.com/jtompl"
+            class="button button-icon"
+            title="twitter: @jtompl"
+          >
+            <i class="fa fa-twitter-square"></i>
+          </a>
         </div>
 
-        <ul class="list-unstyled components">
-            <p>Dummy Heading</p>
-            <li class="active">
-                <a href="#homeSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Home</a>
-                <ul class="collapse list-unstyled" id="homeSubmenu">
-                    <li>
-                        <a href="#">Home 1</a>
-                    </li>
-                    <li>
-                        <a href="#">Home 2</a>
-                    </li>
-                    <li>
-                        <a href="#">Home 3</a>
-                    </li>
-                </ul>
-            </li>
-            <li>
-                <a href="#">About</a>
-            </li>
-            <li>
-                <a href="#pageSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Pages</a>
-                <ul class="collapse list-unstyled" id="pageSubmenu">
-                    <li>
-                        <a href="#">Page 1</a>
-                    </li>
-                    <li>
-                        <a href="#">Page 2</a>
-                    </li>
-                    <li>
-                        <a href="#">Page 3</a>
-                    </li>
-                </ul>
-            </li>
-            <li>
-                <a href="#">Portfolio</a>
-            </li>
-            <li>
-                <a href="#">Contact</a>
-            </li>
-        </ul>
+        <a href="#" class="navigation-extend-button js-extend-main-navigation">
+          <i class="fa fa-bars"></i>
+        </a>
+      </div>
     </nav>
     <router-view />
   </div>
 </template>
 
 <script>
-
 export default {
-  name: 'App',
-  components: {
-  }
-}
+  name: "App",
+  components: {},
+};
 </script>
 
 <style>
 @import "https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700";
+
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
@@ -70,12 +108,12 @@ export default {
   color: #2c3e50;
 }
 #sidebar {
-    min-width: 250px;
-    max-width: 250px;
-    min-height: 100vh;
-    background: #013805;
-    color: #fff;
-    transition: all 0.3s;
+  min-width: 20%;
+  max-width: 20%;
+  min-height: 100vh;
+  background: #013805;
+  color: #fff;
+  transition: all 0.3s;
 }
 #profileImg {
   width: auto;
@@ -83,65 +121,69 @@ export default {
   border-radius: 100%;
 }
 
-
 body {
-    font-family: 'Poppins', sans-serif;
-    background: #fafafa;
+  font-family: "Poppins", sans-serif;
+  background: #fafafa;
 }
 
 p {
-    font-family: 'Poppins', sans-serif;
-    font-size: 1.1em;
-    font-weight: 300;
-    line-height: 1.7em;
-    color: #999;
+  font-family: "Poppins", sans-serif;
+  font-size: 1.1em;
+  font-weight: 300;
+  line-height: 1.7em;
+  color: #999;
 }
 
-a, a:hover, a:focus {
-    color: inherit;
-    text-decoration: none;
-    transition: all 0.3s;
+.sidebarLink,
+.sidebarLink:hover,
+.sidebarLink:focus {
+  color: inherit;
+  text-decoration: none;
+  transition: all 0.3s;
 }
 #sidebar .sidebar-header {
-    padding: 20px;
-    background: #013805;
+  padding: 20px;
+  background: #013805;
 }
 
 #sidebar ul.components {
-    padding: 20px 0;
-    border-bottom: 1px solid #47748b;
+  padding: 20px 0;
+  border-bottom: 1px solid #47748b;
 }
 
 #sidebar ul p {
-    color: #fff;
-    padding: 10px;
+  color: #fff;
+  padding: 10px;
 }
 
-#sidebar ul li a {
-    padding: 10px;
-    font-size: 1.1em;
-    display: block;
+.sidebarLink {
+  padding: 10px;
+  font-size: 1.1em;
+  display: block;
 }
-#sidebar ul li a:hover {
-    color: #7386D5;
-    background: #fff;
+.sidebarLink:hover {
+  color: #7386d5;
+  background: #fff;
 }
-
-#sidebar ul li.active > a, a[aria-expanded="true"] {
-    color: #fff;
-    background: #005806;
+.router-link-exact-active {
+  color: #7386d5 !important;
 }
-ul ul a {
-    font-size: 0.9em !important;
-    padding-left: 30px !important;
-    background: #6d7fcc;
+/* #sidebar ul li.active > .sidebarLink,
+.sidebarLinka[aria-expanded="true"] {
+  color: #fff;
+  background: #005806;
+} */
+.sidebarLink {
+  font-size: 0.9em !important;
+  padding-left: 30px !important;
+  background: #013805;
 }
-@media (max-width: 768px) {
-    #sidebar {
-        margin-left: -250px;
-    }
-    #sidebar.active {
-        margin-left: 0;
-    }
+@media (max-width: 1024px) {
+  #sidebar {
+    margin-left: -20%;
+  }
+  #sidebar.active {
+    margin-left: 0;
+  }
 }
 </style>
