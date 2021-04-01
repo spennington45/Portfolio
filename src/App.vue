@@ -103,6 +103,7 @@ export default {
   width: auto;
   height: 200px;
   border-radius: 100%;
+  padding-bottom: 20px;
 }
 
 body {
