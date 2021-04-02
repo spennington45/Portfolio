@@ -10,7 +10,7 @@ export default new Vuex.Store({
       {
         id: 1,
         title: "Camelot for children service and provider management system",
-        bulletPoints: ["Provides a secure web tool to manage volunteers", "Can search through any volunteers by name and view contact information for each volunteer", "Can link providers to particular services", "Volunteers and services can be added updated or removed to the database as needed"],
+        bulletPoints: ["Provides a secure web tool to manage volunteers", "Search through any volunteers by name and view contact information for each volunteer", "Link providers to particular services", "Volunteers and services can be added updated or removed to the database as needed"],
         description: "A web app to manage volunteers and services for the non-profit group Camelot",
         img: ["https://res.cloudinary.com/doxalakaz/image/upload/v1617313308/Camelot_image_1_kamh5h.png", "../assets/Pennington profile image.jpg"],
         url: "https://camelot-provider-services.netlify.app/",

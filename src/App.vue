@@ -105,7 +105,9 @@ export default {
   border-radius: 100%;
   padding-bottom: 20px;
 }
-
+img {
+  border: solid 1px black !important;
+}
 body {
   font-family: "Poppins", sans-serif;
   background: #fafafa;

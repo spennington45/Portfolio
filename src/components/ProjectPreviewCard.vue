@@ -1,23 +1,31 @@
 <template>
   <div class="projectPreviewLayout">
     <div class="timeline">
-      {{ project.timeline }}
+      <span>
+        {{ project.timeline }}
+      </span>
+        <span id="circle"></span>
     </div>
     <div class="text">
       <h2>{{ project.title }}</h2>
       <ul>
-        <li class="bpList"
+        <li
+          class="bpList"
           v-for="bulletPoint in project.bulletPoints"
           v-bind:key="bulletPoint.id"
         >
           {{ bulletPoint }}
         </li>
       </ul>
-      <button class="btn btn-success">
-        <a class="linkColor" v-if="project.url != ''" :href="project.url"
-          >Visit project</a
-        >
+      <div class="buttons">
+        <span class="tech" v-for="tech in project.technologies" v-bind:key="tech.id">
+          {{tech}}
+        </span>
+      <button class="btn btn-success" v-on:click="projectDetails(project.id)">
+        More details
       </button>
+      <a v-if="project.url != ''" :href="project.url" class="btn btn-success">Visit project</a>
+      </div>
     </div>
     <div class="img">
       <img v-bind:src="project.img[0]" alt="img" />
@@ -31,6 +39,11 @@ export default {
     return {};
   },
   props: ["project"],
+  methods: {
+    projectDetails(toId) {
+      this.$router.push({name: "projectDetails", params: {id: toId}})
+    }
+  }
 };
 </script>
 
@@ -43,10 +56,32 @@ export default {
 }
 .timeline {
   display: flex;
-  flex-flow: column;
+  flex-flow: row;
+  justify-content: space-between;
   grid-area: timeline;
   width: 100px;
   border-right: solid 1px black;
+}
+#circle {
+  position: relative;
+  content: "";
+  margin-top: 7px;
+  background-color: #9b0000;
+  border-radius: 50%;
+  width: 7px;
+  height: 7px;
+}
+.buttons {
+  display: flex;
+  flex-flow: row;
+}
+.tech {
+  background: #013805;
+  color: #fff;
+  margin-right: 10px;
+  align-self: center;
+  padding-left: 5px;
+  padding-right: 5px;
 }
 .text {
   display: flex;
@@ -56,7 +91,6 @@ export default {
   height: auto;
   align-items: flex-start;
   margin-left: 50px;
-  border-bottom: solid 1px black;
   padding-bottom: 25px;
   margin-bottom: 25px;
 }
@@ -66,7 +100,6 @@ export default {
   grid-area: img;
   width: 500px;
   height: auto;
-  border-bottom: solid 1px black;
   padding-bottom: 25px;
   margin-bottom: 25px;
   margin-left: 0px;
@@ -76,6 +109,9 @@ export default {
 }
 .bpList {
   text-align: left;
+}
+.btn-success {
+  margin-right: 10px;
 }
 @media (max-width: 1024px) {
   .projectPreviewLayout {
