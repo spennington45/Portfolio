@@ -21,7 +21,7 @@
         <span class="tech" v-for="tech in project.technologies" v-bind:key="tech.id">
           {{tech}}
         </span>
-      <button class="btn btn-success" v-on:click="projectDetails(project.id)">
+      <button class="btn btn-success" v-on:click="projectDetails(project)">
         More details
       </button>
       <a v-if="project.url != ''" :href="project.url" class="btn btn-success">Visit project</a>
@@ -40,8 +40,8 @@ export default {
   },
   props: ["project"],
   methods: {
-    projectDetails(toId) {
-      this.$router.push({name: "projectDetails", params: {id: toId}})
+    projectDetails(project) {
+      this.$router.push({name: "projectDetails", params: {id: project.id}, props: project})
     }
   }
 };

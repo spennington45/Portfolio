@@ -48,16 +48,6 @@ const router = new Router({
       name: 'projectDetails',
       component: ProjectDetails,
     },
-    // {
-    //   path: '/breweries',
-    //   name: 'BreweryList',
-    //   component: BreweryList,
-    // },
-    // {
-    //   path: "/brewery/:id/beers",
-    //   name: "BreweryBeers",
-    //   component: BreweryBeers,
-    // },
   ]
 })
 
