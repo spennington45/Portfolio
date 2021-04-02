@@ -28,7 +28,7 @@
       </div>
     </div>
     <div class="img">
-      <img v-bind:src="project.img[0]" alt="img" />
+      <img v-bind:src="project.img[0].img" alt="img" />
     </div>
   </div>
 </template>
@@ -66,6 +66,7 @@ export default {
   position: relative;
   content: "";
   margin-top: 7px;
+  margin-right: -3px;
   background-color: #9b0000;
   border-radius: 50%;
   width: 7px;
