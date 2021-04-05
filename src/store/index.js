@@ -60,6 +60,11 @@ export default new Vuex.Store({
       },
     ]
   },
+  getters: {
+    getProjectByID: (state) => (id) => {
+      return state.projects.find(project => project.id == id)
+    }
+  },
   mutations: {
 
   }
