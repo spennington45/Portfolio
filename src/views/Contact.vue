@@ -1,6 +1,8 @@
 <template>
   <div class="container col-xl-5 mt-5 shift-left">
+    <div class="header">
     <h1>Contact Me</h1>
+    </div>
     <div class="d-flex flex-column text-left">
 
     <p>
