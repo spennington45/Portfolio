@@ -60,7 +60,7 @@ export default {
 .imgDetails {
   display: flex;
   flex-flow: column;
-  width: 500px;
+  max-width: 500px;
   height: auto;
   padding-bottom: 25px;
   margin-bottom: 25px;

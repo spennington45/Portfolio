@@ -4,9 +4,9 @@
       <span>
         {{ project.timeline }}
       </span>
-        <span id="circle"></span>
+      <span id="circle"></span>
     </div>
-    <div class="text">
+    <div class="text pr-2">
       <h2>{{ project.title }}</h2>
       <ul>
         <li
@@ -17,14 +17,31 @@
           {{ bulletPoint }}
         </li>
       </ul>
-      <div class="buttons">
-        <span class="tech" v-for="tech in project.technologies" v-bind:key="tech.id">
-          {{tech}}
-        </span>
-      <button class="btn btn-success" v-on:click="projectDetails(project)">
-        More details
-      </button>
-      <a v-if="project.url != ''" :href="project.url" class="btn btn-success">Visit project</a>
+      <h5>Technologies</h5>
+      <div class="row w-fill">
+        <div class="col d-flex flex-row">
+          <span
+            class="tech"
+            v-for="tech in project.technologies"
+            v-bind:key="tech.id"
+          >
+            {{ tech }}
+          </span>
+          <div class="col d-flex flex-end justify-content-end pr-0">
+            <button
+              class="btn btn-sm btn-success"
+              v-on:click="projectDetails(project)"
+            >
+              More details
+            </button>
+            <a
+              v-if="project.url != ''"
+              :href="project.url"
+              class="btn btn-sm btn-success"
+              >Visit project</a
+            >
+          </div>
+        </div>
       </div>
     </div>
     <div class="img">
@@ -41,13 +58,25 @@ export default {
   props: ["project"],
   methods: {
     projectDetails(project) {
-      this.$router.push({name: "projectDetails", params: {id: project.id}, props: project})
-    }
-  }
+      this.$router.push({
+        name: "projectDetails",
+        params: { id: project.id },
+        props: project,
+      });
+    },
+  },
 };
 </script>
 
 <style>
+.w-fill {
+  width: 100%;
+}
+.align-right {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end !important;
+}
 .projectPreviewLayout {
   display: grid;
   grid-auto-flow: column;
@@ -72,10 +101,6 @@ export default {
   width: 7px;
   height: 7px;
 }
-.buttons {
-  display: flex;
-  flex-flow: row;
-}
 .tech {
   background: #013805;
   color: #fff;
@@ -99,7 +124,7 @@ export default {
   display: flex;
   flex-flow: column;
   grid-area: img;
-  width: 500px;
+  max-width: 500px;
   height: auto;
   padding-bottom: 25px;
   margin-bottom: 25px;
