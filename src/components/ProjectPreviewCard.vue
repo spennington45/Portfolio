@@ -155,4 +155,9 @@ export default {
     border-bottom: none;
   }
 }
+@media (max-width: 1770px) {
+  .timeline{
+    margin-left: 0px;
+  }
+}
 </style>
