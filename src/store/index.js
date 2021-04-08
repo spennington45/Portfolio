@@ -14,17 +14,37 @@ export default new Vuex.Store({
         description: "A web app to manage volunteers and services for the non-profit group Camelot",
         img: [{
           img: "https://res.cloudinary.com/doxalakaz/image/upload/v1617313308/Camelot_image_1_kamh5h.png",
-          text: "Temp text"
+          text: "Services page"
         },
         {
-          img: "../assets/Pennington profile image.jpg",
-          text: "Replace me"
-        }
+          img: "https://res.cloudinary.com/doxalakaz/image/upload/v1617910080/Camelot_image_3_tqm4kv.png",
+          text: "Create new services"
+        },
+        {
+          img: "https://res.cloudinary.com/doxalakaz/image/upload/v1617910080/Camelot_image_2_ngmtcd.png",
+          text: "Home page where admin can register new users"
+        },
+        {
+          img: "https://res.cloudinary.com/doxalakaz/image/upload/v1617910450/Camelot_image_4_su8dye.png",
+          text: "Volunteer list"
+        },
+        {
+          img: "https://res.cloudinary.com/doxalakaz/image/upload/v1617910080/Camelot_image_5_iogppo.png",
+          text: "Filter volunteers by first or last name"
+        },
+        {
+          img: "https://res.cloudinary.com/doxalakaz/image/upload/v1617910273/Camelot_image_7_q9vhxf.png",
+          text: "Volunteer details are revealed when their name is clicked on. Volunteers can be updated, linked with a service, or deleted from the database."
+        },
+        {
+          img: "https://res.cloudinary.com/doxalakaz/image/upload/v1617910080/Camelot_image_6_j9kysj.png",
+          text: "Add volunteer form"
+        },
         ],
         url: "https://camelot-provider-services.netlify.app/",
         technologies: ["Java", "PostgresSQL", "Vue.js"],
         timeline: "2021",
-        additionalText: 'Where does it come from? Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum, "Lorem ipsum dolor sit amet..", comes from a line in section 1.10.32. The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested. Sections 1.10.32 and 1.10.33 from "de Finibus Bonorum et Malorum" by Cicero are also reproduced in their exact original form, accompanied by English versions from the 1914 translation by H. Rackham.',
+        additionalText: 'This web app was built to manage volunteers and services for the non-profit group Camelot. The back end was built with a PostgreSQL database to house all the information for the services and volunteers. DAOs and a RESTfull api was built using Java 11 for access to all the information in the database, as well as a authentication service service dedicated to security.  The front end was built using Vue.js with help from a collaborator to style the page.  On the front end log in is required to see any information on any pages. All new users must be registered by an Admin to provide an extra layer of security as all users will have access to personal information.  Once  user has access to the app they can search through volunteers and services as needed. Volunteers are also linked to services to make searching easier as a user can search for a volunteer by services they are linked to.  Volunteers can also be searched by first or last name and details of the each volunteer are displayed in an expanding box once their names are clicked on. Under the providers page volunteers can be updated incase address or other information changes, linked to any service, or deleted from the database.  On the services page of an individual service volunteers can be unlinked from a particular service if they are no longer available for that service. For example a junior buddy would need to be unlinked from that service once they were of age and could be moved to a different service, such as a buddy or adult volunteer.  ',
       },
       {
         id: 2,
@@ -44,24 +64,69 @@ export default new Vuex.Store({
           text: "Add recipe form"
         },
         ],
-        url: "TBD",
-        technologies: ["Java", "PostgreSQL", "Vue.js"],
+        url: "https://github.com/spennington45/BeerRecipe",
+        technologies: ["Java", "PostgreSQL", "Vue.js", "Bootstrap"],
         timeline: "2020-2021",
         additionalText: "Users can register an account and contribute to the database with their favorite recipes. There are also forums for the community to help each other and discuss any recipes, techniques, or anything else they may want to discuss."
       },
       {
         id: 3,
-        title: "Test 3",
-        bulletPoints: [],
-        description: "",
+        title: "BitBucket Slack Bot",
+        bulletPoints: ["Queries BitBucket API 2.0", "Uses Slack app to communicate reports to staff", "Uses timeago to format results in a readable format", "Logs any errors to artifacts on BitBucket"],
+        description: "Several python scripts that query the BitBucket API and sends a report to slack users reporting on commit history of students.",
         img: [
         {
-          img: "https://images.unsplash.com/photo-1485550409059-9afb054cada4?ixid=MXwxMjA3fDB8MHxzZWFyY2h8MXx8cmFuZG9tfGVufDB8fDB8&ixlib=rb-1.2.1&w=1000&q=80",
-          text: "Replace me"
+          img: "https://res.cloudinary.com/doxalakaz/image/upload/v1617916718/bitbucket_slack_bot_hltjal.png",
+          text: "Daily report to slack"
         }],
         url: "",
-        technologies: [],
-        timeline: "",
+        technologies: ["Python"],
+        timeline: "2021",
+        additionalText: "",
+      },
+      {
+        id: 4,
+        title: "Encryption/Decryption cli (caesar cipher)",
+        bulletPoints: ["Accepts a message and encrypts it providing an array of numbers as output", "Accepts a set of csv and translates it into a string as output."],
+        description: "2 different cli application to encrypt and decrypt codes passed into it",
+        img: [
+        {
+          img: "https://res.cloudinary.com/doxalakaz/image/upload/v1617916723/asci_encryption_j4vbmk.png",
+          text: "Encrypting a message"
+        },
+        {
+          img: "https://res.cloudinary.com/doxalakaz/image/upload/v1617916723/asci_decryption_bi5ggp.png",
+          text: "Decrypting a message"
+        },
+      ],
+        url: "https://github.com/spennington45/Java-commandline-projects",
+        technologies: ["Java"],
+        timeline: "2020",
+        additionalText: "",
+      },
+      {
+        id: 5,
+        title: "Virtual biology lab, Macromolecules",
+        bulletPoints: ["Simulates a macromolecule lab for online classes", "Teaches about carbohydrates, lipids, and proteins"],
+        description: "A virtual lab to be used in online classes, simulating a lab normally done in person.",
+        img: [
+        {
+          img: "https://res.cloudinary.com/doxalakaz/image/upload/v1617917629/macromolicule_lab_2_fpizee.png",
+          text: "Results of carbohydrate experiment"
+        },
+        {
+          img: "https://res.cloudinary.com/doxalakaz/image/upload/v1617917629/macromolicule_lab_1_aoc4r2.png",
+          text: "Initial conditions for carbohydrate experiment"
+        },
+        {
+          img: "https://res.cloudinary.com/doxalakaz/image/upload/v1617917921/macromolicule_lab_3_hiweyt.png",
+          text: "Results of lipids experiment"
+        },
+      ],
+        url: "https://spennington45.github.io/Macro-Molecule-Lab/",
+        technologies: ["JavaScript", "HTML5", "CSS", "jQuery"],
+        timeline: "2020",
+        additionalText: "",
       },
     ]
   },
