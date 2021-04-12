@@ -139,6 +139,23 @@ export default {
 .btn-success {
   margin-right: 10px;
 }
+@media (max-width: 1280px) {
+  .projectPreviewLayout {
+  display: grid;
+  grid-auto-flow: column;
+  grid-template-columns: 50px, 400px, 300px;
+  grid-template-areas: "timeline text img";
+}
+  .img {
+    max-width: 300px;
+  }
+  .text {
+      width: 400px;
+  }
+  .timeline {
+    width: 50px;
+  }
+}
 @media (max-width: 1024px) {
   .projectPreviewLayout {
     display: grid;
