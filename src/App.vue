@@ -104,6 +104,7 @@ export default {
   height: 200px;
   border-radius: 100%;
   padding-bottom: 20px;
+  border: none !important;
 }
 img {
   border: solid 1px black !important;
