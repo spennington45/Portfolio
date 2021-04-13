@@ -85,7 +85,21 @@ export default {
   margin-bottom: 25px;
   margin-left: 0px;
 }
-@media (max-width: 1280px) {
+@media (max-width: 1650px) {
+  .projectDetailLayout {
+  display: grid;
+  grid-auto-flow: column;
+  grid-template-columns: 500px, 400px;
+  grid-template-areas: "textDetails imglist";
+}
+  .imgDetails {
+    max-width: 400px;
+  }
+  .textDetails {
+      width: 500px;
+  }
+}
+@media (max-width: 1320px) {
   .projectDetailLayout {
   display: grid;
   grid-auto-flow: column;
